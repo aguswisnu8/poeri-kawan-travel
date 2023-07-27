@@ -10,6 +10,8 @@ class Driver extends Model
 {
     use HasFactory, HasUlids;
 
+    public const STATUS_AVAILABLE = "available";
+
     protected $fillable = [
         "user_id",
         "name",
