@@ -15,7 +15,7 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->boolean('is_active');
+            $table->boolean('is_active')->default(true);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
