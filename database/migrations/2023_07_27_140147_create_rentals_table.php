@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('rentals', function (Blueprint $table) {
             $table->ulid('id')->primary();
 
+            $table->string('code')->uniqid("PK-");
             $table->foreignUlid('car_id')->constrained();
             $table->foreignUlid('customer_id')->constrained();
             $table->foreignUlid('driver_id')->nullable()->constrained();
